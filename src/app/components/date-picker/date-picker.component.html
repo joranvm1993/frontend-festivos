@@ -1,0 +1,12 @@
+<div class="row">
+  <mat-form-field>
+    <mat-label>Escoja una fecha</mat-label>
+    <input matInput [matDatepicker]="picker" (dateInput)="onDateInput($event)">
+    <!-- <mat-hint>YYYY/MM/DD</mat-hint> -->
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" (click)="consultarApi()">Validar Fecha</button>
+
+</div>
